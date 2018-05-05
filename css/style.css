@@ -380,7 +380,7 @@ main{
     padding-bottom:192px;
 }
 
-ul.menu::after{
+/*ul.menu::after{
 content: '';
 display: block;
 border-left:none;
@@ -393,7 +393,72 @@ position:absolute;
 top:55px;
 left:50%;
 box-shadow: 0px 5px 0px 0px rgba(198, 222, 250, 0.004);
+}*/
+
+ul.menu a{
+    transition-duration:0.2s;
 }
+
+ul.menu a:hover{
+    color:#c6defa;
+}
+
+ul.menu li:hover:before{
+    top: 142%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(198, 222, 250, 0);
+    border-top-color: #c6defa;
+    border-width: 16px;
+    margin-left: -16px;
+}
+    
+ul.menu li:hover:after {
+    top: 139%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(107, 154, 208, 0);
+    border-top-color: #6b9ad0;
+    border-width: 12px;
+    margin-left: -12px;
+}
+
+ul.menu li:first-child:hover:before,
+ul.menu li:first-child:hover:after
+{
+    left:9%;
+}
+
+ul.menu li:nth-child(2):hover:before,
+ul.menu li:nth-child(2):hover:after{
+    left:32%;
+}
+
+ul.menu li:nth-child(3):hover:before,
+ul.menu li:nth-child(3):hover:after{
+    left:52%;
+}
+
+ul.menu li:nth-child(4):hover:before,
+ul.menu li:nth-child(4):hover:after{
+    left:73.2%;
+}
+
+ul.menu li:last-child:hover:before,
+ul.menu li:last-child:hover:after{
+    left:95.1%;
+}
+/*nav button:hover{
+
+}*/
 
 .angle-tags-tablet,
 .socials-tablet,
@@ -404,6 +469,21 @@ box-shadow: 0px 5px 0px 0px rgba(198, 222, 250, 0.004);
     display:none;
 }
 
+.spinner { 
+    animation-name: spin; 
+    animation-duration: 1000ms; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear; 
+}
+
+ @keyframes spin {
+      from {
+           transform:rotate(360deg); 
+        }
+         to {
+              transform:rotate(0deg);
+             } 
+    }
 
 
 @media screen and (max-width:1040px){
